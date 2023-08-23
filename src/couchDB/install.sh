@@ -66,7 +66,7 @@ install_using_apt() {
 
     sudo apt install -y couchdb
 }
-sudo init 3
+sudo apt-get install --reinstall init-system-helpers
 export DEBIAN_FRONTEND=noninteractive
 
 # Source /etc/os-release to get OS info
