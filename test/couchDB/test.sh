@@ -9,6 +9,6 @@ source dev-container-features-test-lib
 
 sudo apt install -y curl
 
-check "{\"error\":\"unauthorized\",\"reason\":\"Authentication required.\"}" bash -c "curl 127.0.0.1:5984 | grep '' "
+check "Test CouchDB is running" bash -c "curl 127.0.0.1:5984 | grep '' "
 # Report result
 reportResults
