@@ -7,6 +7,6 @@ source dev-container-features-test-lib
 
 # Feature specific tests
 
-check "{"error":"unauthorized","reason":"Authentication required."}" bash -c "curl http://0.0.0.0:5984"
+check "{"error":"unauthorized","reason":"Authentication required."}" bash -c "curl curl 127.0.0.1:5984"
 # Report result
 reportResults

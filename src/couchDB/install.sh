@@ -56,7 +56,7 @@ install_using_apt() {
     # Update lists
     apt-get update -yq
 
-    sudo apt install -y couchdb
+    sudo apt install couchdb -y
 }
 
 export DEBIAN_FRONTEND=noninteractive
