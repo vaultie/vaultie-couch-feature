@@ -13,8 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - couchDB
         baseImage:
           - debian:latest
           - ubuntu:latest
