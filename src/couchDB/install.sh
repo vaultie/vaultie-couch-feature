@@ -66,7 +66,7 @@ install_using_apt() {
 
     sudo apt install -y couchdb
 }
-
+export RUNLEVEL=1 
 export DEBIAN_FRONTEND=noninteractive
 
 # Source /etc/os-release to get OS info
