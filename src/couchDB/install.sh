@@ -43,7 +43,6 @@ check_packages() {
 
 
 install_using_apt() {
-    sudo systemctl enable couchdb.service
     # Install dependencies
     check_packages apt-transport-https curl ca-certificates gnupg2 sudo
 
