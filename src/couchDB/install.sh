@@ -43,6 +43,7 @@ check_packages() {
 
 
 install_using_apt() {
+    sudo systemctl enable couchdb.service
     # Install dependencies
     check_packages apt-transport-https curl ca-certificates gnupg2 sudo
 
@@ -66,7 +67,6 @@ install_using_apt() {
 
     sudo apt install -y couchdb
 }
-sudo apt-get install --reinstall init-system-helpers
 export DEBIAN_FRONTEND=noninteractive
 
 # Source /etc/os-release to get OS info
