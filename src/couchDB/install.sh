@@ -55,8 +55,16 @@ install_using_apt() {
 
     # Update lists
     apt-get update -yq
+    
+    echo "couchdb couchdb/adminpass_again password admin" | sudo debconf-set-selections
+    echo "couchdb couchdb/adminpass  password admin" | sudo debconf-set-selections
+    echo "couchdb couchdb/cookie string cookie" | sudo debconf-set-selections
+    echo "couchdb couchdb/nodename string couchdb@localhost" | sudo debconf-set-selections
+    echo "couchdb couchdb/mode select standalone" | sudo debconf-set-selections
+    echo "couchdb couchdb/bindaddress string 127.0.0.1" | sudo debconf-set-selections
+ 
 
-    sudo apt install couchdb -y
+    sudo apt install -y couchdb
 }
 
 export DEBIAN_FRONTEND=noninteractive
