@@ -62,7 +62,7 @@ install_using_apt() {
     echo "couchdb couchdb/nodename string couchdb@localhost" | sudo debconf-set-selections
     echo "couchdb couchdb/mode select standalone" | sudo debconf-set-selections
     echo "couchdb couchdb/bindaddress string 127.0.0.1" | sudo debconf-set-selections
- 
+    echo "couchdb couchdb/postrm_remove_databases boolean false" | sudo debconf-set-selections
 
     sudo apt install -y couchdb
 }
